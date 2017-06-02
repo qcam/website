@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-ruby.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <title><%= web_title(@page_title) %></title>
+  </head>
+  <body>
+    <%= render_tmpl("includes/header") %>
+    <div class="site">
+      <div class="site__content">
+        <article class="post post--detail">
+          <header class="post__header">
+            <h1 class="page-heading post__title" itemprop="name headline"><%= @page_title %></h1>
+          </header>
+          <div class="post__content">
+            <%= @body %>
+          </div>
+        </article>
+      </div>
+    </div>
+    <%= render_tmpl("includes/footer") %>
+  </body>
+</html>

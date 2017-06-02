@@ -1,0 +1,20 @@
+footer {
+  .pages {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 24pt;
+    margin-bottom: 24pt;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin-left: 3pt;
+      margin-right: 3pt;
+    }
+
+    a {
+      font-size: 12pt;
+    }
+  }
+}

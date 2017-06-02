@@ -1,0 +1,19 @@
+<footer>
+  <ul class="pages">
+    <li>
+      <a href="/about">About</a>
+    </li>
+    <li>
+      <a href="/posts">Posts</a>
+    </li>
+    <li>
+      <a href="/friends">Friends</a>
+    </li>
+    <li>
+      <a href="/rbcv">Resume</a>
+    </li>
+    <li>
+      <a href="//feedback.hqc.io/feedbacks/new">Feedback</a>
+    </li>
+  </ul>
+</footer>

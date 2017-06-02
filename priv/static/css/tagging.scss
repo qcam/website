@@ -1,0 +1,12 @@
+.tagging {
+  margin-right: 20px;
+
+  @include element(item) {
+    color: $red-color;
+    font-size: 10pt;
+    font-weight: bold;
+    margin-right: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}

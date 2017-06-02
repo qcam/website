@@ -1,0 +1,29 @@
+<div class="site site--home">
+  <a class="avatar" href="">
+    <img width="200" height="200" alt="huynhquancam" src="/assets/images/avatar.png" />
+    <span class="overlay">
+      <span class="overlay-center">
+        <i class="fa fa-home"></i>
+      </span>
+    </span>
+  </a>
+  <h1 class="name">
+    <span class="first-name">Cẩm</span>
+    <span class="last-name">Huỳnh</span>
+  </h1>
+  <p class="username">@qcam</p>
+  <p class="title">
+    Software Enbugger / Dumplings Maker
+  </p>
+  <div class="social-links">
+    <a href="https://github.com/qcam" target="blank">
+      <i class="fa fa-github"></i>
+    </a>
+    <a href="https://twitter.com/_qcam" target="blank">
+      <i class="fa fa-twitter"></i>
+    </a>
+    <a href="https://reddit.com/u/qqcam" target="blank">
+      <i class="fa fa-reddit"></i>
+    </a>
+  </div>
+</div>

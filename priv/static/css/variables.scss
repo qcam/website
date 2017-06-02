@@ -1,0 +1,21 @@
+$yellow-color: #fdf6e3;
+$gray-color: #505050;
+$light-gray-color: #F0F0F0;
+$green-color: #2aa198;
+$red-color: #A03A1B;
+$wheat-color: #e6e0cf;
+$black-color: #000;
+
+$page-width: 1170px;
+
+@mixin element($name) {
+  @at-root &__#{$name} {
+    @content;
+  }
+}
+
+@mixin modifier($name) {
+  @at-root &--#{$name} {
+    @content;
+  }
+}

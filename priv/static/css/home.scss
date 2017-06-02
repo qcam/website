@@ -1,0 +1,91 @@
+.site {
+  @include modifier(home) {
+    max-width: $page-width;
+    text-align: center;
+    padding-top: 75px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+
+    .name {
+      color: $gray-color;
+      font-size: 32pt;
+      margin-top: 20pt;
+      margin-bottom: 10pt;
+    }
+
+    .username {
+      color: $red-color;
+      font-size: 14pt;
+    }
+
+    .title {
+      margin: 0;
+      color: $gray-color;
+      font-size: 14pt;
+    }
+
+    .avatar {
+      @include border-top-radius(50%);
+      @include border-bottom-radius(50%);
+
+      display: inline-block;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        margin: 0 auto;
+        float: left;
+        z-index: 1;
+      }
+
+      &:hover {
+        .overlay {
+          display: initial;
+        }
+      }
+
+      .overlay {
+        border-radius: 50%;
+        transition: all 1s ease;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background-color: rgba(80, 80, 80, 0.65);
+        left: 0;
+        top: 0;
+        display: none;
+
+        .overlay-center {
+          background: transparent;
+          display: block;
+          text-align: center;
+          vertical-align: middle;
+          padding-top: 50pt;
+          font-size: 45pt;
+          color: white;
+        }
+      }
+    }
+
+    .social-links {
+      margin-top: 36pt;
+
+      a {
+        display: inline-block;
+        margin-left: 12pt;
+        margin-right: 12pt;
+
+        &:hover {
+          color: $red-color;
+        }
+      }
+
+      .fa {
+        font-size: 2.5em;
+      }
+    }
+
+  }
+}
