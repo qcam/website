@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <%= render_template("includes/head", metadata: @metadata) %>
+  </head>
+  <body>
+    <%= render_template("includes/header") %>
+    <div class="site site--home">
+      <a class="avatar" href="<%= RouteHelper.root_url %>">
+        <img width="200" height="200" alt="@qcam" src="/assets/images/avatar.png" />
+      </a>
+      <div class="name">Oops! Nothing here to see!</div>
+    </div>
+    <%= render_template("includes/footer") %>
+  </body>
+</html>

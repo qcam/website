@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <%= render_template("includes/head", metadata: @metadata) %>
+  </head>
+  <body>
+    <%= render_template("includes/header") %>
+    <div class="site site--home">
+      <div class="site__content"><%= @body %></div>
+    </div>
+    <%= render_template("includes/footer") %>
+    <%= render_template("includes/js") %>
+  </body>
+</html>

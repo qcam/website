@@ -1,29 +1,34 @@
-defmodule Qcam.Mixfile do
+defmodule HQC.Mixfile do
   use Mix.Project
 
-  def project do
-    [app: :qcam,
-     version: "0.1.0",
-     elixir: "~> 1.4",
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     deps: deps()]
-  end
-
-  def application do
+  def project() do
     [
-      mod: {Qcam, []},
-      extra_applications: [:logger, :cowboy, :plug, :scrivener],
+      app: :hqc,
+      version: "0.8.4",
+      elixir: "~> 1.6.5",
+      build_embedded: Mix.env() == :prod,
+      start_permanent: Mix.env() == :prod,
+      deps: deps()
     ]
   end
 
-  defp deps do
+  def application() do
     [
-      {:nabo, "~> 0.0.1", github: "qcam/nabo"},
+      mod: {HQC, []},
+      extra_applications: [:logger]
+    ]
+  end
+
+  defp deps() do
+    [
+      {:nabo, "~> 1.0"},
+      {:jason, "~> 1.0"},
+      {:earmark, "~> 1.2.5"},
       {:cowboy, "~> 1.1.2"},
       {:plug, "~> 1.3.4"},
-      {:scrivener, "~> 2.0"},
-      {:scrivener_list, "~> 1.0"},
+      {:hackney, "~> 1.8.6"},
+      {:fiet, "~> 0.2.2"},
+      {:nimble_parsec, "~> 0.3.2", runtime: false}
     ]
   end
 end

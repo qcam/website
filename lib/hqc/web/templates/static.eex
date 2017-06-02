@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <%= render_template("includes/head", metadata: @metadata) %>
+  </head>
+  <body>
+    <%= render_template("includes/header") %>
+    <div class="site">
+      <div class="site__content">
+        <article class="post post--detail">
+          <div class="post__content">
+            <%= @body %>
+          </div>
+        </article>
+      </div>
+    </div>
+    <%= render_template("includes/footer") %>
+    <%= render_template("includes/js") %>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-104840979-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>

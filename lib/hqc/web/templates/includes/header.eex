@@ -1,0 +1,7 @@
+<header class="header">
+  <div class="header-content">
+    <div class="brand">
+      <a href="<%= RouteHelper.root_path %>">hqc.io</a>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,33 @@
+<div class="rss-feeds">
+  <h1><%= @metadata.title %></h1>
+  <div class="rss-categories">
+    <%= for category <- @categories do %>
+      <a class="rss-category-link" href="<%= RouteHelper.news_path(%{"category" => category}) %>"><%= category %></a>
+    <% end %>
+    <a class="rss-category-link" href="<%= RouteHelper.news_path() %>">Everything</a>
+  </div>
+  <%= for entry <- @page.entries do %>
+    <div class="link">
+      <h4 class="link__title">
+        <a href="<%= entry.url %>"><%= entry.title %></a>
+      </h4>
+      <div class="link__meta">
+        Published at <span class="link__published-at" ><%= entry.published_at %></span> by <span class="link__source"><%= entry.source %></span>
+      </div>
+    </div>
+  <% end %>
+  <div class="pagination">
+    <%= if Page.has_previous_page?(@page) do %>
+      <a href="<%= RouteHelper.news_path(%{"page" => Page.previous_page_number(@page), "category" => @category}) %>"
+         class="previous page-item">Back</a>
+    <% else %>
+      <span class="previous page-item">Back</span>
+    <% end %>
+    <%= if Page.has_next_page?(@page) do %>
+      <a href="<%= RouteHelper.news_path(%{"page" => Page.next_page_number(@page), "category" => @category}) %>"
+         class="next page-item">Next</a>
+    <% else %>
+      <span class="next page-item">Next</span>
+    <% end %>
+  </div>
+</div>

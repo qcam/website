@@ -1,0 +1,59 @@
+.site {
+  @include modifier(home) {
+    max-width: $page-width;
+    text-align: center;
+    padding-top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+
+    .name {
+      color: $gray-color;
+      font-size: 20pt;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    .username {
+      color: $red-color;
+      font-size: 12pt;
+    }
+
+    .title {
+      margin: 0;
+      color: $gray-color;
+      font-size: 12pt;
+    }
+
+    .avatar {
+      display: inline-block;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        margin: 0 auto;
+        float: left;
+        z-index: 1;
+      }
+    }
+
+    .social-links {
+      margin-top: 36pt;
+
+      a {
+        display: inline-block;
+        margin-left: 12pt;
+        margin-right: 12pt;
+
+        &:hover {
+          color: $red-color;
+        }
+      }
+
+      .fa {
+        font-size: 2em;
+      }
+    }
+
+  }
+}

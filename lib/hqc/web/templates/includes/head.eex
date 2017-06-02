@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="/assets/css/main.css" />
+<link rel="shortcut icon" href="/assets/favicon.ico"/>
+
+<title><%= web_title(@metadata.title) %></title>
+
+<meta content="HQC.IO by Cẩm Huỳnh" property="og:site_name" />
+<meta content="<%= web_title(@metadata.title) %>" property="og:title" />
+<meta content="<%= @metadata.current_url %>" property="og:url" />
+<meta content="<%= @metadata.description %>" property="og:description" />
+<meta content="<%= @metadata.type %>" property="og:type" />
+
+<meta name="description" content="<%= @metadata.description %>" />
+<meta content="<%= Enum.join(@metadata.keywords, ",") %>" property="keywords" />
+<link rel="canonical" href="<%= @metadata.current_url %>" />

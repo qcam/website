@@ -1,0 +1,48 @@
+.rss-feeds {
+  h1 {
+    margin-bottom: 30px;
+  }
+
+  .rss-categories {
+    margin-top: 45px;
+    margin-bottom: 45px;
+  }
+
+  .rss-category-link {
+    color: $blue-color;
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+
+    &:before {
+      content: "#";
+    }
+  }
+
+  .link {
+    margin: 0;
+    margin-bottom: 30px;
+
+    @include element(title) {
+      margin: 0;
+      a {
+        color: $red-color;
+      }
+    }
+
+    @include element(meta) {
+      margin-top: 15px;
+      margin-bottom: 0px;
+      font-size: 0.8em;
+    }
+
+    @include element(published-at) {
+      color: #777;
+    }
+
+    @include element(source) {
+      color: #777;
+    }
+  }
+}

@@ -1,0 +1,196 @@
+.journal {
+  @include modifier(home) {
+    margin-bottom: 30px;
+
+    .journal {
+      margin-bottom: 30px;
+
+      @include element(metadata) {
+        font-size: 10pt;
+        margin: 0;
+        margin-bottom: 5px;
+      }
+
+      @include element(title) {
+        font-size: 14pt;
+        margin: 0;
+        color: $red-color;
+      }
+    }
+  }
+
+  @include modifier(list) {
+    .journal {
+      margin-bottom: 30px;
+
+      @include element(metadata) {
+        font-size: 10pt;
+        margin: 0;
+        margin-bottom: 5px;
+      }
+
+      @include element(title) {
+        font-size: 14pt;
+        margin: 0;
+        color: $red-color;
+      }
+    }
+  }
+
+  @include modifier(detail) {
+    max-width: $page-width;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    .journal {
+      @include element(header) {
+        margin-bottom: 30px;
+      }
+
+      @include element(metadata) {
+        font-size: 10pt;
+        margin: 0;
+        margin-bottom: 15px;
+      }
+
+      @include element(title) {
+        font-size: 1.7em;
+        margin: 0;
+        margin-bottom: 15px;
+        color: $dark-gray-color;
+      }
+
+      @include element(content) {
+        line-height: 150%;
+        padding-top: 0;
+
+        h1, h2, h3, h4, h5, h6 {
+          color: $dark-gray-color;
+        }
+
+        h1 {
+          font-size: 1.5em;
+        }
+
+        h2 {
+          font-size: 1.3em;
+        }
+
+        h3 {
+          font-size: 1.1em;
+        }
+
+        p {
+          font-size: 1em;
+          line-height: 180%;
+        }
+
+        ul, ol {
+          font-size: 1em;
+          line-height: 180%;
+        }
+
+        code.inline {
+          border-radius: 3px;
+          font-size: 0.8em;
+          padding: 5px 8px;
+          font-weight: normal;
+          color: $blue-color;
+        }
+
+        a {
+          color: $red-color;
+          border-bottom: 1px dashed $red-color;
+        }
+
+        strong {
+          font-weight: bold;
+          color: #3D3D3D;
+        }
+
+        img {
+          max-width: 100%;
+          text-align: center;
+          display: block;
+          margin: 0 auto;
+        }
+
+        pre {
+          background: $wheat-color;
+        }
+
+        blockquote {
+          margin: 0;
+          margin-bottom: 15px;
+          padding: 15px;
+          border-left: 3px solid #6f6f6f;
+          background: $wheat-color;
+          font-size: 0.9em;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+          color: #6f6f6f;
+
+          code.inline {
+            background-color: #cec8b8;
+          }
+
+          p {
+            margin: 0;
+            padding: 0;
+          }
+        }
+
+        hr {
+          margin: 15px 0;
+          border: none;
+          width: 100%;
+          background: #6f6f6f;
+          height: 1px;
+        }
+      }
+    }
+  }
+
+  @include element(comment) {
+    display: flex;
+    flex-direction: row;
+
+    @include element(avatar) {
+      flex-basis: 50px;
+      width: 50px;
+      height: 50px;
+      margin-right: 15px;
+    }
+
+    @include element(content) {
+      flex: 1;
+      background-color: $wheat-color;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-left: 3px solid $brown-color;
+      word-break: break-all;
+      hyphens: auto;
+    }
+
+    @include element(header) {
+      margin-bottom: 15px;
+      font-size: 0.8em;
+    }
+
+    @include element(author) {
+      font-weight: bold;
+    }
+
+    @include element(body) {
+      font-size: 0.9em;
+
+      a {
+        color: $red-color;
+        text-decoration: underline;
+      }
+    }
+  }
+}

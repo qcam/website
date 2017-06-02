@@ -1,19 +1,7 @@
-# Qcam
+# hqc.io
 
-**TODO: Add description**
+Source code of [hqc.io](https://hqc.io).
 
-## Installation
+------
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `qcam` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [{:qcam, "~> 0.1.0"}]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/qcam](https://hexdocs.pm/qcam).
-
+This repository and [hqc.io](https://hqc.io) are released under [![Creative Commons License](https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png).](https://creativecommons.org/licenses/by-nc-nd/4.0/).

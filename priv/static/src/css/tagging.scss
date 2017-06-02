@@ -1,0 +1,34 @@
+.tagging {
+  margin-right: 20px;
+
+  @include element(item) {
+    color: $red-color;
+    font-size: 10pt;
+    font-weight: bold;
+    margin-right: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+.suggested-tags {
+  background-color: $wheat-color;
+  padding: 15px;
+  margin-top: 30px;
+
+  h3 {
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  .tag {
+    color: $blue-color;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+
+    &:before {
+      content: "#";
+    }
+  }
+}
