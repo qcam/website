@@ -27,7 +27,8 @@ defmodule HQC.Router do
     english_posts =
       PostRepo.all()
       |> PostRepo.order_by_datetime()
-      |> Enum.take(5)
+      |> PostRepo.exclude_draft()
+      |> PostRepo.filter_published()
 
     vietnamese_posts =
       Reader.Vault.all()

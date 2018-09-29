@@ -3,7 +3,8 @@
   "slug": "five-rails-gotchas",
   "datetime": "2016-09-07T08:30:00Z",
   "keywords": ["rails pitfalls"],
-  "description": "Five pitfalls in Rails that might trap you."
+  "description": "Five pitfalls in Rails that might trap you.",
+  "draft": true
 }
 ---
 It's undeniable that Rails is a great framework to speedily build up your application.
