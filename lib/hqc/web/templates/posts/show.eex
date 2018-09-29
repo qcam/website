@@ -1,0 +1,14 @@
+<article class="journal journal--detail">
+  <header class="journal__header">
+    <h1 class="journal-heading journal__title" itemprop="name headline"><%= @post.title %></h1>
+    <p class="journal__metadata">
+      Written on <time datetime="<%= DateTime.to_iso8601(@post.datetime) %>" itemprop="datePublished"><%= DateTime.to_iso8601(@post.datetime) %></time>
+    </p>
+  </header>
+  <hr class="posts-line" noshade/>
+  <div class="journal__content">
+    <%= @post.body_html %>
+  </div>
+</article>
+<script src="/assets/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>

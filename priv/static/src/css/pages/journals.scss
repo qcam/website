@@ -48,6 +48,7 @@
     .journal {
       @include element(header) {
         margin-bottom: 30px;
+        text-align: center;
       }
 
       @include element(metadata) {
@@ -60,7 +61,7 @@
         font-size: 1.7em;
         margin: 0;
         margin-bottom: 15px;
-        color: $dark-gray-color;
+        color: $red-color;
       }
 
       @include element(content) {
@@ -119,7 +120,7 @@
         }
 
         pre {
-          background: $wheat-color;
+          background-color: #f3ecd7;
         }
 
         blockquote {

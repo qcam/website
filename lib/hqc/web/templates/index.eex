@@ -27,8 +27,27 @@
 
   <hr class="posts-line" noshade/>
   <div class="essays essays--home">
-    <h2><a href="https://quan-cam.com/posts">Recent posts</a></h2>
-    <%= for post <- @posts do %>
+    <h2>Writings</h2>
+    <%= for post <- @english_posts do %>
+      <div class="post">
+        <h3 class="post__title">
+          <a href="/posts/<%= post.slug %>"><%= post.title %></a>
+        </h3>
+        <div class="post__intro"><%= post.excerpt_html %></div>
+        <div class="post__metadata">
+          Published on
+          <time datetime="<%= DateTime.to_iso8601(post.datetime) %>" class="post__creation-date">
+            <%= post.datetime %>
+          </time>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <hr class="posts-line" noshade/>
+  <div class="essays essays--home">
+    <h2><a href="https://quan-cam.com/posts">Posts on quan-cam.com</a></h2>
+    <%= for post <- @vietnamese_posts do %>
       <div class="post">
         <h3 class="post__title">
           <a href="<%= post.url %>"><%= post.title %></a>

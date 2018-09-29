@@ -9,6 +9,7 @@ defmodule HQC.Router do
 
   alias HQC.{
     PageRepo,
+    PostRepo,
     Paginator,
     Reader
   }
@@ -23,17 +24,22 @@ defmodule HQC.Router do
   plug(:dispatch)
 
   get "/" do
-    posts =
+    english_posts =
+      PostRepo.all()
+      |> PostRepo.order_by_datetime()
+      |> Enum.take(5)
+
+    vietnamese_posts =
       Reader.Vault.all()
       |> Reader.News.search_by_source("quan-cam.com")
       |> Reader.News.sort_by_recency()
-      |> Enum.take(5)
+      |> Enum.take(3)
 
     journals =
       Reader.Vault.all()
       |> Reader.News.search_by_source("medium.com/@hqc")
       |> Reader.News.sort_by_recency()
-      |> Enum.take(5)
+      |> Enum.take(3)
 
     metadata = %Metadata{
       title: "HQC.IO | Cẩm Huỳnh's website",
@@ -45,10 +51,34 @@ defmodule HQC.Router do
       current_url: RouteHelper.root_url()
     }
 
-    send_html_resp(
-      conn,
-      View.render("index", layout: "home", metadata: metadata, posts: posts, journals: journals)
-    )
+    assigns = [
+      layout: "home",
+      metadata: metadata,
+      english_posts: english_posts,
+      vietnamese_posts: vietnamese_posts,
+      journals: journals
+    ]
+
+    send_html_resp(conn, View.render("index", assigns))
+  end
+
+  get "/posts/:slug" do
+    case PostRepo.get(slug) do
+      {:ok, post} ->
+        metadata = %Metadata{
+          title: post.title,
+          description: post.excerpt_html,
+          keywords: [],
+          type: "article",
+          current_path: RouteHelper.root_path(),
+          current_url: RouteHelper.root_url()
+        }
+
+        send_html_resp(
+          conn,
+          View.render("posts/show", layout: "default", metadata: metadata, post: post)
+        )
+    end
   end
 
   @news_page_size 10
