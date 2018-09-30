@@ -71,8 +71,8 @@ defmodule HQC.Router do
           description: post.excerpt_html,
           keywords: [],
           type: "article",
-          current_path: RouteHelper.root_path(),
-          current_url: RouteHelper.root_url()
+          current_path: RouteHelper.root_path() <> "posts/" <> post.slug,
+          current_url: RouteHelper.root_url() <> "posts/" <> post.slug
         }
 
         send_html_resp(
