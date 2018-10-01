@@ -43,9 +43,8 @@ defmodule HQC.Router do
       |> Enum.take(3)
 
     metadata = %Metadata{
-      title: "HQC.IO | Cẩm Huỳnh's website",
-      description:
-        "Hey, it is Cẩm, I write and note down everything spinning around my life in this blog.",
+      title: "HQC.IO | Cẩm Huỳnh's little blog",
+      description: "I write and note down everything I learned in this blog.",
       keywords: ["blog", "programming", "web", "software development"],
       type: "website",
       current_path: RouteHelper.root_path(),
@@ -68,7 +67,8 @@ defmodule HQC.Router do
       {:ok, post} ->
         metadata = %Metadata{
           title: post.title,
-          description: post.excerpt_html,
+          description: post.excerpt,
+          image: post.metadata["image"],
           keywords: [],
           type: "article",
           current_path: RouteHelper.root_path() <> "posts/" <> post.slug,

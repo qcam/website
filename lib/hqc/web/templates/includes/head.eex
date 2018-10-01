@@ -12,6 +12,9 @@
 <meta content="<%= @metadata.current_url %>" property="og:url" />
 <meta content="<%= @metadata.description %>" property="og:description" />
 <meta content="<%= @metadata.type %>" property="og:type" />
+<%= if @metadata.image do %>
+<meta content="<%= RouteHelper.base_url() <> @metadata.image %>" property="og:image" />
+<% end %>
 
 <meta name="description" content="<%= @metadata.description %>" />
 <meta content="<%= Enum.join(@metadata.keywords, ",") %>" property="keywords" />

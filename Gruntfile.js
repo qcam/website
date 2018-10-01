@@ -15,7 +15,7 @@ module.exports = function(grunt) {
       main: {
         files: [
           {expand: true, cwd: 'priv/static/src/', src: ['images/*'], dest: 'priv/static/dist/', filter: 'isFile'},
-          {expand: true, cwd: 'priv/static/src/', src: ['favicon.ico'], dest: 'priv/static/dist/', filter: 'isFile'},
+          {expand: true, cwd: 'priv/static/src/', src: ['favicon.ico'], dest: 'priv/static/dist/'},
           {expand: true, cwd: 'priv/static/src/', src: ['js/*.js'], dest: 'priv/static/dist/', filter: 'isFile'},
         ],
       },

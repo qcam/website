@@ -5,6 +5,8 @@ defmodule HQC.Web.RouteHelper do
 
   def prepend_base(path), do: @base_url <> path
 
+  def base_url(), do: @base_url
+
   def root_path(), do: "/"
 
   def root_url() do

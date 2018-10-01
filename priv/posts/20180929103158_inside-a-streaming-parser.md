@@ -1,7 +1,8 @@
 {
   "title": "Inside a streaming parser",
   "slug": "inside-a-streaming-parser",
-  "datetime": "2018-09-29T10:31:58.413158Z"
+  "datetime": "2018-09-29T10:31:58.413158Z",
+  "image": "/assets/images/marco-island.jpg"
 }
 ---
 This post showcases how the streaming part in Saxy is done, and how a recent speed-up was made thanks to macros.
