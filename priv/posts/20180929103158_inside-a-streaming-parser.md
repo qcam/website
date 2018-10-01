@@ -1,6 +1,6 @@
 {
-  "title": "How macros could possibly speed up your Elixir application",
-  "slug": "how-macros-could-speed-up-your-application",
+  "title": "Inside a streaming parser",
+  "slug": "inside-a-streaming-parser",
   "datetime": "2018-09-29T10:31:58.413158Z"
 }
 ---
