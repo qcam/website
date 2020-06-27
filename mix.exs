@@ -26,8 +26,9 @@ defmodule HQC.Mixfile do
       {:earmark, "~> 1.2.5"},
       {:cowboy, "~> 1.1.2"},
       {:plug, "~> 1.3.4"},
-      {:hackney, "~> 1.8.6"},
-      {:fiet, "~> 0.2.2"},
+      {:hackney, "~> 1.15.0"},
+      {:fiet, github: "qcam/fiet"},
+      {:saxy, github: "qcam/saxy", override: true},
       {:nimble_parsec, "~> 0.3.2", runtime: false}
     ]
   end

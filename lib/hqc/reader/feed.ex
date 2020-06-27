@@ -99,7 +99,7 @@ defmodule HQC.Reader.Feed do
 
       {:ok, status, _resp_headers, ref} ->
         :ok = :hackney.skip_body(ref)
-        Logger.error("Unexpected response, status: #{inspect(status)}")
+        Logger.error("Unexpected response, status: #{inspect(status)}, URL: #{inspect(url)}")
         :error
 
       {:error, reason} ->
